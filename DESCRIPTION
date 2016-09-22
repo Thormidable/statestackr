@@ -1,6 +1,7 @@
 Package: statestackr
 Title: R6 Stack Class for Managing State
-Version: 0.0.0.9000
+Version: 0.0.1
+Date: 2016-09-22
 Authors@R: person("Will", "Thorley", email = "will.thorley@gmail.com", role = c("aut", "cre"))
 Description: Manages state in a push pop stack for iterating scope. Push Pop
     stack allowing reading and writing to current element.
