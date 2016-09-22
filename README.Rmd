@@ -42,42 +42,35 @@ statestack <- StateStack$new(0L)
 
 #check the current state
 statestack$State
-# [[1]]
 # [1] 0
 
 #Update the current state
 statestack$State <- 2L
 statestack$State
-# [[1]]
 # [1] 2
 
 #Store the old state (say for entering a scope contained within the old scope). This will copy the current state and push it onto the stack.
 statestack$push()
 statestack$State
-# [[1]]
-# [2] 2
+# [1] 2
 
 #Update the current state
 statestack$State <- 3L
 statestack$State
-# [[1]]
-# [2] 3
+# [1] 3
 
 #Update the current state
 statestack$State <- 1L
 statestack$State
-# [[1]]
-# [2] 1
+# [1] 1
 
 #Return to the last state
 top_state <- statestack$pop()
 top_state
-# [[1]]
-# [2] 1
+# [1] 1
 
 statestack$State
-# [[1]]
-# [2] 2
+# [1] 2
 
 ```
 

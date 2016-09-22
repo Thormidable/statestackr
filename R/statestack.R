@@ -44,10 +44,10 @@ StateStack<- R6Class(
       }
       temp <- private$Stack[element]
       private$Stack[element] <- NULL
-      temp
+      temp[[1]]
     },
     peek = function(){
-      return(private$Stack[self$depth()])
+      return(private$Stack[self$depth()][[1]])
     },
     push = function(x) {
       if(missing(x)){
