@@ -104,4 +104,4 @@ Please report any [issues](https://github.com/Thormidable/statestackr/issues).
 Documentation
 -------------
 
--   [Introduction to R6 classes](https://cran.r-project.org/web/packages/R6/vignettes/Introduction.html)
+-   [R6 class package](https://cran.r-project.org/package=R6)
