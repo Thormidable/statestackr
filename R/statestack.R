@@ -24,7 +24,7 @@ StateStack<- R6Class(
   public = list(
     initialize = function(StartingValue){
       if(missing(StartingValue)) {
-        StartingValue <- 0
+        StartingValue <- private$default_state()
       }
       private$Stack <<- list()
       private$Stack[1] <- StartingValue
@@ -32,32 +32,39 @@ StateStack<- R6Class(
     clear = function(value)
     {
       if(missing(value)){
-        value
+        value <- private$default_state()
       }
       private$Stack <<- list()
       private$Stack[1] <-value
     },
     pop = function(){
-      temp <- private$Stack[length(private$Stack)]
-      private$Stack[length(private$Stack)] <- NULL
+      element <-self$depth()
+      if(element < 2) {
+        stop("In class StateStackr pop called more times than push")
+      }
+      temp <- private$Stack[element]
+      private$Stack[element] <- NULL
       temp
     },
     peek = function(){
-      result <- private$Stack[length(private$Stack)]
-      result
+      return(private$Stack[self$depth()])
     },
     push = function(x) {
       if(missing(x)){
         x <- self$peek()
       }
-      private$Stack[length(private$Stack)+1] <<-x
+      private$Stack[self$depth()+1] <<-x
     },
     set = function(value) {
-      private$Stack[length(private$Stack)] = value
+      private$Stack[self$depth()] = value
+    },
+    depth = function() {
+      return(length(private$Stack))
     }
     ),
   private = list(
-    Stack = NULL
+    Stack = NULL,
+    default_state = function() { return(0) }
     ),
   active = list(
     State = function(value) {
