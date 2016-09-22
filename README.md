@@ -1,2 +1,3 @@
-# statestackr
-R package for a push pop stack for state storage
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+[![Travis-CI Build Status](https://travis-ci.org/Thormidable/statestackr.svg?branch=master)](https://travis-ci.org/Thormidable/statestackr)
