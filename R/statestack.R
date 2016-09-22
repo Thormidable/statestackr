@@ -17,7 +17,7 @@ is.statestack <- function(x) {
 #' @method peek returns the top value of the stack without removing it
 #' @method clear resets the stack to be an empty stack
 #' @method set will set the top value of the stack
-#' @field State allows the user to peek or set the top value of the stack
+#' @field state allows the user to peek or set the top value of the stack
 #' @export
 StateStack<- R6Class(
   "StateStack",
@@ -67,7 +67,7 @@ StateStack<- R6Class(
     default_state = function() { return(0) }
     ),
   active = list(
-    State = function(value) {
+    state = function(value) {
       if(missing(value)){
         return(self$peek())
       }

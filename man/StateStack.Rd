@@ -14,7 +14,7 @@ Stack Classs for storing a stack of states class
 \section{Fields}{
 
 \describe{
-\item{\code{State}}{allows the user to peek or set the top value of the stack}
+\item{\code{state}}{allows the user to peek or set the top value of the stack}
 }}
 \keyword{datasets}
 

@@ -19,17 +19,17 @@ test_that("statestack push works", {
 
   statestack$push(5)
 
-  expect_equal(statestack$State,5)
+  expect_equal(statestack$state,5)
   expect_equal(statestack$depth(),2)
 
   statestack$push(1)
 
-  expect_equal(statestack$State,1)
+  expect_equal(statestack$state,1)
   expect_equal(statestack$depth(),3)
 
   statestack$push()
 
-  expect_equal(statestack$State,1)
+  expect_equal(statestack$state,1)
   expect_equal(statestack$depth(),4)
 
 })
@@ -101,7 +101,7 @@ test_that("statestack clear works", {
   expect_equal(statestack$depth(),4)
 
   statestack$clear(2)
-  expect_equal(statestack$State,2)
+  expect_equal(statestack$state,2)
   expect_equal(statestack$depth(),1)
 
 })
@@ -115,22 +115,22 @@ test_that("statestack set works", {
 
   statestack$set(5)
 
-  expect_equal(statestack$State,5)
+  expect_equal(statestack$state,5)
   expect_equal(statestack$depth(),1)
 
   statestack$set(1)
 
-  expect_equal(statestack$State,1)
+  expect_equal(statestack$state,1)
   expect_equal(statestack$depth(),1)
 
   expect_error(statestack$set())
 
   statestack$push()
-  expect_equal(statestack$State,1)
+  expect_equal(statestack$state,1)
   expect_equal(statestack$depth(),2)
 
   statestack$set(2)
-  expect_equal(statestack$State,2)
+  expect_equal(statestack$state,2)
   expect_equal(statestack$depth(),2)
 
 
