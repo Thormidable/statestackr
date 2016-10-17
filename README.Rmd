@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-An R package implementing a push pop stack which allows for reading and writing to the top value of the stack. An example of a use for this class would be to store a series of states while traversing a tree structure.
+An R package implementing a push/pop stack which allows for reading and writing to the top value of the stack. An example of a use for this class would be to store a series of states while traversing a tree structure.
 
 The stack will be created with a single element in the stack to be used as the current state, this value can be specified in the constructor or if undefined will default to 0. As such starting `$depth()` is 1 and cannot be reduced beneath 1.
 
